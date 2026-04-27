@@ -1,0 +1,36 @@
+[
+  {
+    "sha": "8381f6e",
+    "url": "https://github.com/sergeyus11/blog/commit/8381f6ecc4bda0767ff04bcc377f509504bfe229",
+    "message_subject": "docs(blog): changelog — auto-drafts cron + Cabinet Delete (PR #29)",
+    "message_body": "Documentation-only commit, updates docs/CHANGELOG.md after PR #29 merge.",
+    "files": ["docs/CHANGELOG.md"]
+  },
+  {
+    "sha": "9da1b52",
+    "url": "https://github.com/sergeyus11/blog/commit/9da1b52af8c70cf8f965d0b24b5dd73a8d665ab5",
+    "message_subject": "feat(blog): auto-drafts cron + Cabinet Delete (#29)",
+    "message_body": "Cron-based daily-scan (20:00 MSK) + weekly-digest (Fri 15:00) for blog.gonkahub.com through headless `claude -p`. Adds: shared auto-drafts-runner.sh, two prompts, replaces Cabinet Reject with Delete to free slug, registers schedules in sergeyus11/hq. Implementation across 5 chunks: C1 Infra setup, C2 Runner + prompts, C3 Cabinet Delete code (backend+frontend), C4 Deploy + smoke test, C5 Cron + registry + production.",
+    "files": [
+      "backend/apps/posts/cabinet_views.py",
+      "backend/apps/posts/models.py",
+      "backend/apps/posts/urls.py",
+      "docs/plans/2026-04-25-blog-auto-drafts.md",
+      "docs/specs/2026-04-25-blog-auto-drafts.md",
+      "frontend-gonka/src/app/cabinet/page.tsx",
+      "frontend-gonka/src/lib/cabinet-api.ts",
+      "scripts/auto-drafts-runner.sh",
+      "scripts/prompts/daily-scan.md",
+      "scripts/prompts/weekly-digest.md",
+      "scripts/schedule-issues.conf",
+      "scripts/sudo-askpass.sh"
+    ]
+  },
+  {
+    "sha": "7d7a637",
+    "url": "https://github.com/sergeyus11/blog/commit/7d7a637d76106ac443f5fdfd9d9c85cfe9ad3529",
+    "message_subject": "docs(gk): add plain-language audience rule and leading-# H1 guard",
+    "message_body": "Target audience is mixed: hosts/validators plus ordinary non-technical followers of the project. Default to plain language, introduce subsystems in one sentence before use, and keep concrete specifics as trust anchors rather than the only content. Also forbid starting a paragraph with #NNNN — Markdown promotes it to H1 and breaks layout.",
+    "files": [".claude/rules/gk/style.md"]
+  }
+]
